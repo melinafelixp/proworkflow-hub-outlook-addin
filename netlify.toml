@@ -1,0 +1,20 @@
+# Netlify build settings. Set PWH_CLIENT_ID (and PWH_AUTHORITY if needed) under
+# Site configuration > Environment variables, then trigger a deploy.
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# Outlook caches the pane aggressively. Never cache the HTML shell; the script URL is hashed.
+[[headers]]
+  for = "/taskpane.html"
+  [headers.values]
+    Cache-Control = "no-cache"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "no-referrer"

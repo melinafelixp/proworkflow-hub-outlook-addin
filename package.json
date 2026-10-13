@@ -1,0 +1,39 @@
+{
+  "name": "proworkflow-hub-outlook-addin",
+  "version": "0.1.0",
+  "private": true,
+  "description": "ProWorkflow Hub - Outlook add-in that groups ProWorkflow notification emails into campaign conversations.",
+  "scripts": {
+    "dev-server": "webpack serve --mode development",
+    "build": "webpack --mode production",
+    "build:dev": "webpack --mode development",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "validate": "office-addin-manifest validate manifest.production.xml",
+    "validate:local": "office-addin-manifest validate manifest.local.xml",
+    "certs": "office-addin-dev-certs install"
+  },
+  "dependencies": {
+    "@azure/msal-browser": "^4.13.0",
+    "@fluentui/react-components": "^9.64.0",
+    "@fluentui/react-icons": "^2.0.300",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/office-js": "^1.0.500",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "copy-webpack-plugin": "^12.0.2",
+    "dotenv": "^16.4.5",
+    "html-webpack-plugin": "^5.6.3",
+    "office-addin-dev-certs": "^1.13.5",
+    "office-addin-manifest": "^1.13.6",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.6.3",
+    "vitest": "^2.1.8",
+    "webpack": "^5.97.1",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.2.0"
+  }
+}

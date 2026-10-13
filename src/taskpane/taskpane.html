@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ProWorkflow Hub</title>
+    <!-- Office.js must load from Microsoft's CDN. -->
+    <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
+    <style>
+      /* Brand fonts. Regular carries interface text; Bold carries headings and callouts. */
+      @font-face {
+        font-family: "Questa Sans";
+        src: url("assets/fonts/QuestaSans-Regular.otf") format("opentype");
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "Questa Sans";
+        src: url("assets/fonts/QuestaSans-Bold.otf") format("opentype");
+        font-weight: 700;
+        font-style: normal;
+        font-display: swap;
+      }
+      html,
+      body,
+      #root {
+        height: 100%;
+        margin: 0;
+      }
+      body {
+        background: #ffffff;
+        color: #21231f;
+        /* Questa Sans defaults to old-style figures. Lining figures read better for codes and counts. */
+        font-variant-numeric: lining-nums;
+        font-family: "Questa Sans", "Segoe UI", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
